@@ -1,5 +1,5 @@
 const MainApiConfig = {
-  baseUrl: "",
+  baseUrl: "https://news-explorer-production.up.railway.app/",
   headers: {
     "Content-Type": "application/json",
     authorization: `Bearer ${localStorage.getItem("jwt")}`,
