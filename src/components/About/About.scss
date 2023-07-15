@@ -46,7 +46,7 @@
 }
 
 $breakpoint-tablet: 768px;
-$breakpoint-mobile: 500px;
+$breakpoint-mobile: 520px;
 
 @media (max-width: $breakpoint-tablet) {
   .about {
@@ -68,6 +68,7 @@ $breakpoint-mobile: 500px;
 @media (max-width: 705px) {
   .about {
     height: 100%;
+    padding-top: 40px;
   }
 }
 
