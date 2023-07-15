@@ -53,16 +53,16 @@ function Header(props) {
               </button>
             </nav>
             <div className="dropdown">
-              <Link to={"/"}>
+              <Link className="header__text" to={"/"}>
                 <div
-                  className={`header__link header__text header__link_dropdown1 `}
+                  className={`header__link header__link_dropdown1 `}
                 >
                   Inicio
                 </div>
               </Link>
               {props.isLoggedIn ? (
                 <>
-                  <Link to={"/saved-news"}>
+                  <Link className="header__text" to={"/saved-news"}>
                     <div
                       className={`header__link header__text ${textColor} header__link_dropdown2`}
                     >
@@ -70,7 +70,7 @@ function Header(props) {
                     </div>
                   </Link>
                   <button
-                    className={`${buttonColor} header__text header__text_dropdown ${logOutIcon} `}
+                    className={`${buttonColor} header__button header__text header__text_dropdown ${logOutIcon} `}
                     onClick={props.letLogOut}
                   >
                     {currentUser.name}
@@ -90,17 +90,13 @@ function Header(props) {
           </>
         ) : (
           <nav className="header__nav">
-            <Link to={"/"}>
-              <div className={`header__link header__text ${textColor}`}>
+            <Link className={`header__link header__text ${textColor}`} to={"/"}>
                 Inicio
-              </div>
             </Link>
             {props.isLoggedIn ? (
               <>
-                <Link to={"/saved-news"}>
-                  <div className={`header__link header__text ${textColor}`}>
+                <Link className={`header__link header__text ${textColor}`} to={"/saved-news"}>
                     Artículos guardados
-                  </div>
                 </Link>
                 <button
                   className={`${buttonColor} header__text ${logOutIcon}`}
