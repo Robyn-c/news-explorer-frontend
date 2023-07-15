@@ -3,7 +3,7 @@ import React from "react";
 function SuccessPopup(props) {
   function handleLinkClick() {
     props.onClose();
-    props.openSignIn(true);
+    props.isSignInPopupOpen(true);
   }
 
   return (
