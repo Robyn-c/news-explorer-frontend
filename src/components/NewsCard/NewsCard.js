@@ -3,6 +3,7 @@ import { NewsContext } from "../../contexts/NewsContext";
 import "./NewsCard.scss";
 import NoResults from "../NoResults/NoResults";
 import MainApi from "../../utils/MainApi";
+import NoImage from "../../images/no-image.png"
 
 function NewsCard(props) {
   const news = React.useContext(NewsContext);
@@ -130,7 +131,7 @@ function Card(props) {
         rel="noreferrer"
         className="card__link"
       >
-        <img className="card__image" src={props.urlToImage} alt={props.title} />
+        <img className="card__image" src={props.urlToImage || NoImage} alt={props.title} />
         <div className="card__container">
           <p className="card__date">
             {new Date(props.publishedAt).toLocaleDateString("es-MX", {

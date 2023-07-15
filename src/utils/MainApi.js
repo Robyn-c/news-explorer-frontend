@@ -1,5 +1,5 @@
 const MainApiConfig = {
-  baseUrl: "https://news-explorer-production.up.railway.app/",
+  baseUrl: "http://localhost:5879",
   headers: {
     "Content-Type": "application/json",
     authorization: `Bearer ${localStorage.getItem("jwt")}`,
@@ -120,13 +120,22 @@ class MainApiClass {
   }
 
   saveArticle(jwt, { keyword, title, text, date, source, link, image }) {
+    const requestBody = {
+      keyword,
+      title,
+      text,
+      date,
+      source,
+      link,
+      image: image || 'https://img.freepik.com/premium-vector/default-image-icon-vector-missing-picture-page-website-design-mobile-app-no-photo-available_87543-11093.jpg'
+    };
     return fetch(`${this._url}/articles`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         authorization: `Bearer ${jwt}`,
       },
-      body: JSON.stringify({ keyword, title, text, date, source, link, image }),
+      body: JSON.stringify(requestBody),
     }).then((res) => {
       return res.json();
     });
