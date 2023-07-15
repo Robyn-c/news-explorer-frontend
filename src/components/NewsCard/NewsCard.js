@@ -72,7 +72,7 @@ function Card(props) {
               date: props.publishedAt,
               source: props.source,
               link: props.url,
-              image: props.urlToImage,
+              image: props.urlToImage || 'https://cdn.jsdelivr.net/gh/Robyn-c/news-explorer-frontend@develop/src/images/no-image.png',
             })
               .then(() => {
                 console.log("Article saved");
