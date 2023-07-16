@@ -3,6 +3,9 @@
 Esta aplicación web es un servicio que permite buscar noticias usando palabras clave y guardarlas en tu cuenta personal.
 Funciona conectando la aplicación con una API de terceros [NewsAPI](https://newsapi.org/)
 
+
+![image](https://github.com/Robyn-c/news-explorer-frontend/assets/112044548/f433151e-ddb3-4e50-8cc3-e897c864d894)
+
 ## Tecnologías utilizadas
 * React
 * React Router
